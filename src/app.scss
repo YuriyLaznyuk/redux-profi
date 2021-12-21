@@ -1,13 +1,14 @@
-.wrapper{
-   
-color: rgb(21, 32, 192);
-text-align: center;
-&__img{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
+.wrapper {
+	color: rgb(21, 32, 192);
+	text-align: center;
 
-}
+	&__img {
+		display: flex;
+		flex-direction: column;
+
+		justify-content: center;
+
+		align-items: center;
+		text-align: center;
+	}
 }

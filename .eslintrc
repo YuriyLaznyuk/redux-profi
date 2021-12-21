@@ -22,7 +22,9 @@
         {
           "endOfLine": "auto"
         }
-      ]
+      ],
+      "no-tabs": 0
+
     },
     "settings": {
       "react": {
