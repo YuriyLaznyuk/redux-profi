@@ -13,14 +13,15 @@ type Render = {
 	count1: number;
 	count2: number;
 };
-const Count = ({id, value}: countProps) => {
-	console.warn(`Count${id} render1: ${id === 1 && ++render.count1}`);
-	console.warn(`Count${id} render2: ${id === 2 && ++render.count2}`);
+export default React.memo(function Count({id, value}: countProps) {
+	console.log(
+		`Count${id} render: ${id === 1 ? ++render.count1 : ++render.count2}`,
+	);
 	return (
 		<div>
-			<h1>{value}</h1>
+			<h1>
+				{value}: {id}
+			</h1>
 		</div>
 	);
-};
-
-export default Count;
+});

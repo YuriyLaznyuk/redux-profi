@@ -4,6 +4,8 @@ import im1 from './assets/icons/favicon.png';
 import NBU from './assets/icons/vector.svg';
 import Main from './components/Main/Main';
 import UseMemo from './components/Memo/UseMemo/UseMemo';
+import UseRef from './components/UseRef/UseRef';
+import UseCallBack from './components/UseCallBack/UseCallBack';
 
 const App: React.FC = () => {
 	const a = 10;
@@ -18,6 +20,8 @@ const App: React.FC = () => {
 			</div>
 			<Main />
 			<UseMemo />
+			<UseRef />
+			<UseCallBack />
 		</div>
 	);
 };
