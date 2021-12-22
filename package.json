@@ -1,5 +1,5 @@
 {
-  "name": "ts-eslint",
+  "name": "redux-profi",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -8,18 +8,22 @@
     "build": "webpack --mode production",
     "test": "echo \"Error: no test specified\" && exit 1",
     "lint": "eslint src/**/*.{ts,tsx} --quiet --fix"
-
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "@types/react-redux": "^7.1.20",
     "add": "^2.0.6",
+    "axios": "^0.24.0",
     "css-loader": "^6.5.1",
     "file-loader": "^6.2.0",
     "mini-css-extract-plugin": "^2.4.5",
     "react": "^17.0.2",
-    "react-dom": "^17.0.2"
+    "react-dom": "^17.0.2",
+    "react-redux": "^7.2.6",
+    "redux": "^4.1.2",
+    "redux-thunk": "^2.4.1"
   },
   "devDependencies": {
     "@babel/core": "^7.12.10",
