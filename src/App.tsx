@@ -2,6 +2,8 @@ import React from 'react';
 import './app.scss';
 import im1 from './assets/icons/favicon.png';
 import NBU from './assets/icons/vector.svg';
+import UserList from './components/Userlist/UserList';
+import TodoList from './components/ToDoList/TodoList';
 
 const App: React.FC = () => {
 	const a = 10;
@@ -14,6 +16,10 @@ const App: React.FC = () => {
 
 				<NBU />
 			</div>
+
+			<UserList />
+			<hr />
+			<TodoList />
 		</div>
 	);
 };
