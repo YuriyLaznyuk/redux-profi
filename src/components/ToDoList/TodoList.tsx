@@ -10,6 +10,7 @@ const TodoList = () => {
 	const pages = [1, 2, 3, 4, 5];
 	useEffect(() => {
 		fetchTodos(page, limit);
+		// eslint-disable-next-line react-hooks/exhaustive-deps
 	}, [page]);
 
 	if (loading) {
