@@ -11,6 +11,7 @@ const UserList = () => {
 	useEffect(() => {
 		// dispatch(fetchUsers());
 		fetchUsers();
+		// eslint-disable-next-line react-hooks/exhaustive-deps
 	}, []);
 	if (loading) {
 		return <h1>...loading</h1>;
