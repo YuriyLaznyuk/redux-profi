@@ -6,28 +6,33 @@ import {RootState} from '../../store/reducers';
 
 const Photos = () => {
 	const {fetchPhoto, photoPage, statePage} = useAction();
-	const {photo, page, state} = useSelector((state: RootState) => state.photo);
+	const {photo, page, state, total} = useSelector(
+		(state: RootState) => state.photo,
+	);
 	const scrollHandler = (e: any) => {
 		//общая высота страницы с учетом скрола
-		console.log('scrollHeight', e.target.documentElement.scrollHeight);
+		// console.log('scrollHeight', e.target.documentElement.scrollHeight);
 		//текущее положение скрола от верха страницы
-		console.log('scrollTop', e.target.documentElement.scrollTop);
+		// console.log('scrollTop', e.target.documentElement.scrollTop);
 		// высота видимой области страницы
-		console.log('innerHeight', window.innerHeight);
+		// console.log('innerHeight', window.innerHeight);
 
 		const scrollHeight = e.target.documentElement.scrollHeight;
 		const scrollTop = e.target.documentElement.scrollTop;
 		const innerHeight = window.innerHeight;
 		if (scrollHeight - (scrollTop + innerHeight) < 100) {
-			console.log('scroll<100');
+			// console.log('photo.length', photo.length);
+			// console.log('total', total);
+			// console.log('scroll<100');
 			statePage(true);
 		}
 	};
 	useEffect(() => {
-		if (state) {
+		if (state && page < 5) {
 			fetchPhoto(page);
 			photoPage();
 			statePage(false);
+			console.log('effectState ', photo.length, 'total ', total, 'page', page);
 		}
 	}, [state]);
 

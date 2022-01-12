@@ -13,6 +13,10 @@ export const fetchPhoto =
 				type: PhotoActionTypes.FETCH_PHOTO_SUCCESS,
 				payload: response.data,
 			});
+			dispatch({
+				type: PhotoActionTypes.FETCH_PHOTO_TOTAL,
+				payload: Number(response.headers['x-total-count']),
+			});
 		} catch (e) {
 			dispatch({
 				type: PhotoActionTypes.FETCH_PHOTO_ERROR,
