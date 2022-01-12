@@ -9,12 +9,18 @@ export interface PhotoState {
 	loading: boolean;
 	error: boolean;
 	photo: IPhoto[];
+	page: number;
+	total: number;
+	state: boolean;
 }
 
 export enum PhotoActionTypes {
 	FETCH_PHOTO_RESPONSE = 'FETCH_PHOTO_RESPONSE',
 	FETCH_PHOTO_SUCCESS = 'FETCH_PHOTO_SUCCESS',
 	FETCH_PHOTO_ERROR = 'FETCH_PHOTO_ERROR',
+	FETCH_PHOTO_PAGE = 'FETCH_PHOTO_PAGE',
+	FETCH_PHOTO_STATE = 'FETCH_PHOTO_STATE',
+	FETCH_PHOTO_TOTAL = 'FETCH_PHOTO_TOTAL',
 }
 export type FetchPhotoResponse = {
 	type: PhotoActionTypes.FETCH_PHOTO_RESPONSE;
@@ -26,8 +32,24 @@ export type FetchPhotoSuccess = {
 export type FetchPhotoError = {
 	type: PhotoActionTypes.FETCH_PHOTO_ERROR;
 };
+export type FetchPhotoPage = {
+	type: PhotoActionTypes.FETCH_PHOTO_PAGE;
+};
+
+export type FetchPhotoState = {
+	type: PhotoActionTypes.FETCH_PHOTO_STATE;
+	payload: boolean;
+};
+
+export type FetchPhotoTotal = {
+	type: PhotoActionTypes.FETCH_PHOTO_TOTAL;
+	payload: number;
+};
 
 export type PhotoAction =
 	| FetchPhotoSuccess
 	| FetchPhotoResponse
-	| FetchPhotoError;
+	| FetchPhotoError
+	| FetchPhotoPage
+	| FetchPhotoState
+	| FetchPhotoTotal;
