@@ -1,25 +1,22 @@
 import React from 'react';
 import './app.scss';
-import im1 from './assets/icons/favicon.png';
-import NBU from './assets/icons/vector.svg';
-import UserList from './components/Userlist/UserList';
+import {Route, Routes} from 'react-router-dom';
 import TodoList from './components/ToDoList/TodoList';
+import UserList from './components/Userlist/UserList';
+import Navigation from './components/Navigation/Navigation';
+import Photos from './components/Photos/Photos';
 
 const App: React.FC = () => {
-	const a = 10;
 	return (
 		<div className='wrapper'>
-			<h1>Redux Profi {a}</h1>
-
-			<div className='wrapper__img'>
-				<img src={im1} alt='nbu' width={50} />
-
-				<NBU />
-			</div>
-
-			<UserList />
-			<hr />
-			<TodoList />
+			<Navigation />
+			<Routes>
+				<Route path='/' element={<h1>Redux-profi</h1>} />
+				<Route path='/todo' element={<TodoList />} />
+				<Route path='/user' element={<UserList />} />
+				<Route path='/photos' element={<Photos />} />
+				<Route path='*' element={<h1>Page not found</h1>} />
+			</Routes>
 		</div>
 	);
 };

@@ -1,0 +1,15 @@
+.navigation {
+	height: 100px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin: 0 0 30px 0;
+	&__link {
+		margin: 0 10px 0 10px;
+		font-size: 24px;
+		padding: 5px;
+	}
+}
+.active {
+	border-bottom: 1px solid red;
+}
