@@ -1,6 +1,11 @@
 .navigation {
+	position: fixed;
+	top: 0;
+	left: 0;
 	height: 100px;
+	width: 100%;
 	display: flex;
+	background: #f9f9f9;
 	justify-content: center;
 	align-items: center;
 	margin: 0 0 30px 0;

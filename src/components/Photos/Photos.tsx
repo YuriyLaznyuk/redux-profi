@@ -18,6 +18,7 @@ const Photos = () => {
 		// console.log('innerHeight', window.innerHeight);
 
 		const scrollHeight = e.target.documentElement.scrollHeight;
+
 		const scrollTop = e.target.documentElement.scrollTop;
 		const innerHeight = window.innerHeight;
 		if (scrollHeight - (scrollTop + innerHeight) < 100) {
@@ -28,7 +29,7 @@ const Photos = () => {
 		}
 	};
 	useEffect(() => {
-		if (state && page < 5) {
+		if (state && page < 15) {
 			fetchPhoto(page);
 			photoPage();
 			statePage(false);
