@@ -1,8 +1,8 @@
 import React, {useEffect} from 'react';
-import {useAction} from '../../hooks/useAction';
+import {useAction} from '../../../hooks/useAction';
 import './photos.scss';
 import {useSelector} from 'react-redux';
-import {RootState} from '../../store/reducers';
+import {RootState} from '../../../store/reducers';
 
 const Photos = () => {
 	const {fetchPhoto, photoPage, statePage} = useAction();

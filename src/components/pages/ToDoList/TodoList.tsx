@@ -1,6 +1,6 @@
 import React, {useEffect} from 'react';
-import {useTypedSelector} from '../../hooks/useTypedSelector';
-import {useAction} from '../../hooks/useAction';
+import {useTypedSelector} from '../../../hooks/useTypedSelector';
+import {useAction} from '../../../hooks/useAction';
 
 const TodoList = () => {
 	const {fetchTodos, setTodoPage} = useAction();
