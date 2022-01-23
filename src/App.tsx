@@ -1,12 +1,12 @@
 import React from 'react';
 import './app.scss';
 import {Route, Routes} from 'react-router-dom';
-import TodoList from './components/pages/ToDoList/TodoList';
-import UserList from './components/pages/Userlist/UserList';
+import TodoList from './pages/ToDoList/TodoList';
+import UserList from './pages/Userlist/UserList';
 import Navigation from './components/Navigation/Navigation';
-import Photos from './components/pages/Photos/Photos';
-import Home from './components/pages/Home/Home';
-import Modal from './components/pages/Modal/Modal';
+import Photos from './pages/Photos/Photos';
+import Home from './pages/Home/Home';
+import Modal from './pages/Modal/Modal';
 
 const App: React.FC = () => {
 	return (
