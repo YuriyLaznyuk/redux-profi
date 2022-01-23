@@ -1,0 +1,14 @@
+.fetchPosts {
+	text-align: center;
+	&__post {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		padding: 5px;
+		width: 400px;
+		border-bottom: 1px solid;
+		&-item {
+			margin: 0 10px 0 10px;
+		}
+	}
+}

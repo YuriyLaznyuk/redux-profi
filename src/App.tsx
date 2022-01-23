@@ -7,6 +7,7 @@ import Navigation from './components/Navigation/Navigation';
 import Photos from './pages/Photos/Photos';
 import Home from './pages/Home/Home';
 import Modal from './pages/Modal/Modal';
+import Posts from './pages/Posts/Posts';
 
 const App: React.FC = () => {
 	return (
@@ -19,6 +20,7 @@ const App: React.FC = () => {
 					<Route path='/user' element={<UserList />} />
 					<Route path='/photos' element={<Photos />} />
 					<Route path='/modal' element={<Modal />} />
+					<Route path='/posts' element={<Posts />} />
 					<Route path='*' element={<h1>Page not found</h1>} />
 				</Routes>
 			</div>
