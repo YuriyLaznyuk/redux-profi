@@ -1,0 +1,28 @@
+.simpleForm {
+	//position: relative;
+	width: 400px;
+	padding: 20px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	border: 1px solid;
+	border-radius: 10px;
+	&__x {
+		position: relative;
+		top: -15px;
+		right: -185px;
+		width: 18px;
+		height: 18px;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		border: 1px solid;
+		border-radius: 50%;
+		cursor: pointer;
+		&:hover {
+			background: #f20d19;
+			transition: 0.5s;
+		}
+	}
+}

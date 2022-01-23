@@ -33,6 +33,12 @@ const Navigation = () => {
 			<Link className={getActive(pathname, '/photos')} to='/photos'>
 				Photos
 			</Link>
+			<Link className={getActive(pathname, '/modal')} to='/modal'>
+				Modal
+			</Link>
+			<Link className={getActive(pathname, '/posts')} to='/posts'>
+				Posts
+			</Link>
 		</nav>
 	);
 };
